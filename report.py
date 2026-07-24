@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Katianna Koulakis. All rights reserved. See LICENSE.
 """Aggregate monitor.py and serp_monitor.py logs into per-date trend stats."""
 import argparse
 import glob

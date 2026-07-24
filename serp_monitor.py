@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Katianna Koulakis. All rights reserved. See LICENSE.
 """Query SerpApi (Google search results) for a keyword set and check organic ranking + competitor domains."""
 import argparse
 import json

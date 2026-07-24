@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Katianna Koulakis. All rights reserved. See LICENSE.
 """Query multiple AI assistants with a prompt set and log whether/how they mention a brand."""
 import argparse
 import json
