@@ -1,0 +1,41 @@
+name: No .env committed
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-env-not-committed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fail if .env is tracked by git
+        run: |
+          if git ls-files | grep -qx '\.env'; then
+            echo "::error file=.env::.env is tracked by git. Remove it with 'git rm --cached .env' and rotate any exposed keys immediately."
+            exit 1
+          fi
+          echo ".env is not tracked by git."
+
+      - name: Fail if .gitignore does not exclude .env
+        run: |
+          if ! grep -qx '\.env' .gitignore; then
+            echo "::error file=.gitignore::.gitignore no longer excludes .env."
+            exit 1
+          fi
+          echo ".gitignore excludes .env."
+
+      - name: Fail if any staged/tracked file looks like an env file with real values
+        run: |
+          # Catches .env variants (.env.local, .env.production, etc.) but allows the
+          # committed .env.example template.
+          matches=$(git ls-files | grep -E '(^|/)\.env(\.[a-zA-Z0-9_-]+)?$' | grep -v '\.env\.example$' || true)
+          if [ -n "$matches" ]; then
+            echo "::error::Found tracked env file(s) that should not be committed:"
+            echo "$matches"
+            exit 1
+          fi
+          echo "No stray env files tracked."
