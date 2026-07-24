@@ -1,5 +1,7 @@
 # exadel-ai-monitor
 
+![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)
+
 Tracks Exadel AI's visibility across two channels:
 
 1. **AI assistants** — queries ChatGPT, Claude, and Gemini with a set of prompts and checks whether "Exadel AI" is mentioned (and at what rank, for numbered-list answers), plus which tracked competitors are mentioned.
@@ -78,3 +80,7 @@ recommendations/  point-in-time SEO recommendation writeups
 
 - `results/*.jsonl` and `.env` are gitignored — raw run data and API keys never get committed.
 - AI-assistant mention rates and Google appearance rates in `report.py` exclude prompts/queries that already name "Exadel AI" in their text, since those are echoes of the brand name rather than organic recall.
+
+## License
+
+All rights reserved — see [LICENSE](LICENSE). This code is not open source; no use, copying, or redistribution is permitted without prior written permission. To request permission, contact connectwithkatianna@gmail.com.
