@@ -1,6 +1,7 @@
 # exadel-ai-monitor
 
 ![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)
+[![No .env committed](https://github.com/connectwithkatianna-ctrl/exadel-ai-monitor/actions/workflows/no-env-committed.yml/badge.svg)](https://github.com/connectwithkatianna-ctrl/exadel-ai-monitor/actions/workflows/no-env-committed.yml)
 
 Tracks Exadel AI's visibility across two channels:
 
