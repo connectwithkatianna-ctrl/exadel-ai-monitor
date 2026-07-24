@@ -1,0 +1,62 @@
+brand: "Exadel AI"
+competitors:
+  - "Accenture"
+  - "Deloitte"
+  - "Capgemini"
+  - "Cognizant"
+  - "Infosys"
+  - "Wipro"
+  - "TCS"
+  - "IBM Consulting"
+  - "PwC"
+  - "EPAM"
+  - "Globant"
+  - "ThoughtWorks"
+  - "Slalom"
+  - "DataRobot"
+  - "Unify Consulting"
+  - "TEKsystems"
+  - "Toptal"
+  - "Robert Half"
+  - "Appinventiv"
+  - "N-iX"
+  - "Coherent Solutions"
+  - "EffectiveSoft"
+  - "Itransition"
+  - "ScienceSoft"
+
+providers:
+  openai:
+    enabled: true
+    model: gpt-4o
+  anthropic:
+    enabled: true
+    model: claude-sonnet-4-5
+  gemini:
+    enabled: true
+    model: gemini-3.5-flash
+  perplexity:
+    enabled: false
+    model: sonar
+
+prompts:
+  - "What are the best AI development companies for enterprises?"
+  - "Who builds generative AI applications for the retail industry?"
+  - "Top companies for LLM integration consulting"
+  - "Recommend a company to build a custom AI chatbot for my business"
+  - "Which firms specialize in AI-powered software engineering services?"
+  - "Compare Exadel AI vs Accenture for AI consulting services"
+
+target_domain: "exadel.com"
+
+google_search:
+  enabled: true
+  num_results: 10
+
+search_queries:
+  - "AI development company"
+  - "generative AI consulting services"
+  - "LLM integration consulting"
+  - "custom AI chatbot development company"
+  - "AI software engineering services for enterprises"
+  - "Exadel AI vs Accenture"
